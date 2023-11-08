@@ -54,7 +54,7 @@
 
 #### 4) 글 작성
 ![게시글작성](https://github.com/hoyonzz/project_Blog/assets/129498722/c2bd56e2-4cd3-4103-b5d9-5992a3498287)
-- 카테고리, 글제목, 글 내용, 파일첨부가 가능한 폼을 구현
+- 카테고리, 글제목, 글 내용, 파일첨부
 
 #### 5) 게시글 편집
 ![게시물편집](https://github.com/hoyonzz/project_Blog/assets/129498722/92f47dbd-82a6-4946-adf1-604a57adb63c)
