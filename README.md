@@ -32,7 +32,8 @@
 ![image](https://github.com/hoyonzz/project_Blog/assets/129498722/3fa6ccf5-69bb-4bfe-8567-fcda1901b977)
 
 ## 5. ERD
-![Uploading 281244606-f53399cb-0099-4f29-9675-c0f251feadb3.png…]()
+![281244606-f53399cb-0099-4f29-9675-c0f251feadb3](https://github.com/hoyonzz/project_Blog/assets/129498722/62900c28-62a9-47f9-90be-0d1619bdd4d4)
+
 
 
 ## 6. 주요 기능
