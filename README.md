@@ -23,3 +23,17 @@
 
 ### 3-1. 디렉토리 구조
 ![디렉토리구조](https://github.com/hoyonzz/project_Blog/assets/129498722/d1457b1a-1858-4d9d-9e9f-1958812a9074)
+
+### 3-2. WBS
+WBS		1주차				2주차						3주차	
+필요작업	비고	26일	27일	28일	29일	30일	1일	2일	3일	4일	5일	6일	7일
+주제선정													
+필요요소분석													
+일정 기획													
+URL, 모델 설계													
+Django개발													
+필요기능점검													
+디자인요소적용													
+발표자료준비													
+![image](https://github.com/hoyonzz/project_Blog/assets/129498722/63ddfe1c-2697-4355-b40d-c11b99fb6c23)
+
