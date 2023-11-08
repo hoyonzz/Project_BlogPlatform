@@ -32,7 +32,7 @@
 ![image](https://github.com/hoyonzz/project_Blog/assets/129498722/3fa6ccf5-69bb-4bfe-8567-fcda1901b977)
 
 ## 5. ERD
-![image](https://github.com/hoyonzz/project_Blog/assets/129498722/f53399cb-0099-4f29-9675-c0f251feadb3)
+![Uploading 281244606-f53399cb-0099-4f29-9675-c0f251feadb3.png…]()
 
 
 ## 6. 주요 기능
@@ -44,7 +44,7 @@
 ![blog](https://github.com/hoyonzz/project_Blog/assets/129498722/d8356a16-4b80-4433-b9f6-635b23f2d127)
 - 검색 기능과 로그인, 회원가입, 계정 프로필, 카테고리들을 구현
 
-#### 2_1) blog리스트페이지_로그인 후
+#### 2_1) blog메인_로그인 후
 ![로그인5](https://github.com/hoyonzz/project_Blog/assets/129498722/00a0f3cb-2ea6-4fa5-b5a3-11770e285b02)
 - 로그인을 하게 되면 로그인 버튼이 글쓰기 버튼으로 바뀌게 되고, 프로필에 계정 정보를 표시
 
