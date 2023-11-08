@@ -22,4 +22,4 @@
 ## 3. 프로젝트 구조와 개발 일정
 
 ### 3-1. 디렉토리 구조
-
+![디렉토리구조](https://github.com/hoyonzz/project_Blog/assets/129498722/d1457b1a-1858-4d9d-9e9f-1958812a9074)
