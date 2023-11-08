@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자가 되기 위한 발걸음</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <img src="{% static 'images/est.jpg' %}" alt="est 이미지">
+		<p>
+			이스트 소프트 백엔드 부트캠프 3기 오르미 미니 프로젝트
+		</p>
+		
+        <h1>개발자가 되기 위한 발걸음</h1>
+        <p>개발자가 되기 위해 공부한 것들을 기록하고 공유하고, 일상 생활의 글들을 게시하고 공유하는 블로그</p>
+
+        <img src="{% static 'images/licat.png' %}" alt="licat 이미지">
+        <a href="{% url 'blog_main' %}" class="button">입장하기</a>
+    </div>
+</body>
+</html>

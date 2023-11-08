@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Detail</title>
+</head>
+<body>
+    <h1>{{ post.title }}</h1>
+    <p>작성자: {{ post.author.username }}</p>
+    <p>작성일: {{ post.created_at }}</p>
+    <p>카테고리: {{ post.category.name }}</p>
+    <hr>
+    <h2>내용:</h2>
+    <p>{{ post.content }}</p>
+    <hr>
+    <a href="{% url 'blog_edit' post.id %}">편집</a>
+    <a href="{% url 'blog_delete' post.id %}">삭제</a>
+    <a href="{% url 'blog_main' %}">목록으로 돌아가기</a>
+</body>
+</html>

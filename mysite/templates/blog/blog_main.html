@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Blog</title>
+		<link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+		<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+		<link rel="stylesheet" href="{% static 'css/global.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/header.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/button.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/banner.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/category.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/author.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/post.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/posts.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+	</head>
+	<body>
+		<header>
+			<form method="get" action="{% url 'search' %}">
+				{{ search_form }}
+				<button type="submit">Search</button>
+			</form>
+			<div class="max-width">
+				<h1>
+					<a href="{% url 'blog_main' %}">
+						<img src="{% static 'assets/Logo.svg' %}" alt="My Blog" />
+					</a>
+				</h1>
+				<ul>
+					{% if request.user.is_authenticated %}
+					<li class="profile-img">
+						<a href="{% url 'profile' %}">
+							<img src="{% static 'assets/profile.jpg' %}" alt="My Page" />
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'blog_write' %}" class="button">
+							<img src="{% static 'assets/icon-modify-white.svg' %}" alt="" />
+							<span>Write</span>
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'logout' %}?next={{ request.path }}" class="button white">
+							<img src="{% static 'assets/icon-logout.svg' %}" alt="" />
+							<span>Logout</span>
+						</a>
+					</li>
+					{% else %}
+					<li>
+						<a href="{% url 'login' %}" class="button gray">
+							<img src="{% static 'assets/icon-login.svg' %}" alt="" />
+							<span>Login</span>
+						</a>
+					</li>
+					<li class="only-pc">
+						<a href="{% url 'signup' %}" class="button gray">
+							<img src="{% static 'assets/icon-register.svg' %}" alt="" />
+							<span>Register</span>
+						</a>
+					</li>
+					{% endif %}
+				</ul>
+			</div>
+		</header>
+		<div class="banner">
+			<div class="max-width">
+				<div class="banner-contents">
+					<p class="sub-text">Django Blog</p>
+					<p class="main-text">개발자가 되기 위한 발걸음</p>
+					<p class="description">
+						개발자가 되기 위해 공부한 것들을 기록하고 공유하며, 일상 생활에 대한 것들도 기록하고 공유하는 블로그
+					</p>
+				</div>
+			</div>
+		</div>
+		<main>
+			<div class="max-width">
+				<h2 class="a11y-hidden">Post</h2>
+				<ul class="posts">
+					{% for post in posts %}
+					<li>
+						<a href="{% url 'blog_detail' post.id %}">
+							<article>
+								<img src="{{ post.head_image.url }}" alt="" />
+								<div class="contents-wrap">
+									<dl class="category">
+										<dt class="a11y-hidden">Category</dt>
+										<dd>{{ post.category.name }}</dd>
+									</dl>
+									<h3>{{ post.title }}</h3>
+									<dl class="author-wrap">
+										<dt class="a11y-hidden">Author</dt>
+										<dd class="author"><img src="{% static 'images/profile.jpg' %}" alt="" /> {{ post.author.username }}</dd>
+										<dt class="a11y-hidden">Created</dt>
+										<dd class="created">{{ post.created_at }}</dd>
+									</dl>
+									<p class="post-description">
+										{{ post.content }}
+									</p>
+								</div>
+							</article>
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+				<aside class="about">
+					<h2>About Me</h2>
+					<img src="{% static 'images/profile.jpg' %}" alt="" class="user-profile" />
+					<p class="user-name">{{ user.username }}</p>
+					<p class="user-description">{{ user.description }}</p>
+					<h3>Categories</h3>
+					<ul class="categories">
+						{% for category in category_list %}
+						<li><a href="{% url 'category_page' category.slug %}">{{ category.name }}</a></li>
+						{% endfor %}
+					</ul>
+					<h3>Follow</h3>
+					<ul class="sns">
+						<!-- Add your social media links here -->
+					</ul>
+				</aside>
+			</div>
+		</main>
+		<footer>
+			<div class="max-width">
+				<h2>©Weniv Corp.</h2>
+				<button class="top-button">TOP</button>
+			</div>
+		</footer>
+	</body>
+</html>
