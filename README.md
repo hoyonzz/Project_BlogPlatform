@@ -33,3 +33,10 @@
 
 ## 5. ERD
 ![image](https://github.com/hoyonzz/project_Blog/assets/129498722/f53399cb-0099-4f29-9675-c0f251feadb3)
+
+
+## 6. 주요 기능
+### 6-1. 메인페이지
+![index](https://github.com/hoyonzz/project_Blog/assets/129498722/352d02cf-5c95-480b-92e9-48f8b2313d25)
+- 프로젝트 소개와 블로그 제목, 입장하기 버튼을 표시
+
